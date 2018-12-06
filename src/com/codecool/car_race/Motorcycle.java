@@ -2,9 +2,9 @@ package com.codecool.car_race;
 import java.util.Random;
 
 public class Motorcycle extends Vehicle {
-    int motorcycleNumber;
+    Integer motorcycleNumber;
     String name;
-    int distanceTraveled;
+    Integer distanceTraveled;
 
     public void prepareForLap(Race race) {
 

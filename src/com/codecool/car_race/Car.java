@@ -4,7 +4,7 @@ import java.util.Random;
 public class Car extends Vehicle {
     Integer normalSpeed;
     String name;
-    int distanceTraveled;
+    Integer distanceTraveled;
 
     Random randSpeed = new Random();
 

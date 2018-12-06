@@ -2,8 +2,8 @@ package com.codecool.car_race;
 import java.util.Random;
 
 public class Truck extends Vehicle {
-    int breakdownTurnsLeft;
-    int distanceTraveled;
+    Integer breakdownTurnsLeft;
+    Integer distanceTraveled;
     public void prepareForLap(Race race) {
 
     }
