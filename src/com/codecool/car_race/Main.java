@@ -7,7 +7,8 @@ public class Main {
      * Creates all the vehicles that will be part of this race.
      */
     private static void createVehicles(Race race) {
-    }
+        Car car = new Car();
+        }
 
     /**
      * Entry point of our program. Creates one race instance and
