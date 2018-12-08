@@ -1,7 +1,7 @@
 package com.codecool.car_race;
 
 public abstract class Vehicle {
-    int distanceTraveled;
+    Integer distanceTraveled;
 
     public void prepareForLap(Race race) {
 
