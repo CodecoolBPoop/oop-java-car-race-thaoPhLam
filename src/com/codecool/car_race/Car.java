@@ -11,9 +11,9 @@ public class Car extends Vehicle {
             {"Avalanche", "Crown", "Silver", "Evolution", "Stardust",
                     "Temperament", "Hero", "Daydream", "Supremacy", "Tarragon"};
     Random randCarIndex = new Random();
-    Integer oneCarNameIndex = randCarIndex.nextInt(10) + 1;
+    Integer oneCarNameIndex = randCarIndex.nextInt(9) + 1;
     String oneCarName = carNames[oneCarNameIndex];
-    Integer otherCarNameIndex = randCarIndex.nextInt(10) + 1;
+    Integer otherCarNameIndex = randCarIndex.nextInt(9) + 1;
     String otherCarName = carNames[otherCarNameIndex];
 
 
@@ -21,13 +21,12 @@ public class Car extends Vehicle {
 
     public Car() {
         this.normalSpeed = randSpeed.nextInt(110 - 80 + 1) + 80;
-        this.name = oneCarName + otherCarName;
-        System.out.println(this.normalSpeed);
-        System.out.println(this.name);
+        this.name = oneCarName + " " + otherCarName;
+        System.out.println(this.name + "'s normal speed is: " + this.normalSpeed + "km/h");
     }
 
     public String getNormalSpeed() {
-        return normalSpeed.toString() + "km/h";
+        return normalSpeed.toString();
     }
 
     public String getName() {
