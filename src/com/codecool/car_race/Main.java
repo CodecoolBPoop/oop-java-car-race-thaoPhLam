@@ -8,10 +8,8 @@ public class Main {
      */
     private static void createVehicles(Race race) {
         Car car = new Car();
-        System.out.println(car.getName());
 
         Motorcycle motor = new Motorcycle();
-        System.out.println(motor.getName());
     }
 
     /**

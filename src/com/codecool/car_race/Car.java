@@ -20,8 +20,10 @@ public class Car extends Vehicle {
     Integer distanceTraveled;
 
     public Car() {
-        this.normalSpeed = randSpeed.nextInt(110) + 80;
+        this.normalSpeed = randSpeed.nextInt(110 - 80 + 1) + 80;
         this.name = oneCarName + otherCarName;
+        System.out.println(this.normalSpeed);
+        System.out.println(this.name);
     }
 
     public String getNormalSpeed() {

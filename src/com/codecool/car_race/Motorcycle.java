@@ -18,6 +18,7 @@ public class Motorcycle extends Vehicle {
         this.name = "Motorcycle " + motorcycleNumber;
         motorCounter++;
         */
+        System.out.println(this.name);
     }
 
     public Integer getMotorcycleNumber() {
