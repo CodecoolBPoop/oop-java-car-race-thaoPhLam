@@ -1,13 +1,21 @@
 package com.codecool.car_race;
 
 public abstract class Vehicle {
-    Integer distanceTraveled;
+    protected int normalSpeed;
+    protected String name;
+    protected int actualSpeed;
+    protected int distanceTraveled;
 
-    public void prepareForLap(Race race) {
-
+    protected Vehicle(int normalSpeed) {
+        this.normalSpeed = normalSpeed;
+        this.name = generateName();
     }
 
-    public void moveForAnHour() {
+    protected abstract String generateName();
 
+    public abstract void prepareForLap(Race race);
+
+    public final void moveForAnHour(){
+        distanceTraveled += actualSpeed;
     }
 }
