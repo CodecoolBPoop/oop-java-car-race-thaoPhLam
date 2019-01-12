@@ -4,7 +4,6 @@ import java.util.Random;
 public class Car extends Vehicle {
     protected static final int YELLOW_FLAG_SPEED = 75;
     private static final Random randSpeed = new Random();
-
     private static final String[] carNames = {
             "Avalanche",
             "Crown",
@@ -18,25 +17,30 @@ public class Car extends Vehicle {
             "Tarragon"
     };
 
+    @Override
+    protected String generateName() {
+        Random randFirstName = new Random();
+        int indexRandFirstName = randFirstName.nextInt(9) + 1;
+        String firstName = carNames[indexRandFirstName];
+
+        Random randLastName = new Random();
+        int indexRandLastName = randLastName.nextInt(9) + 1;
+        String lastName = carNames[indexRandLastName];
+
+        return firstName + " " + lastName;
+    }
+
+    private static int generateNormalSpeed() {
+        return randSpeed.nextInt(110-80+1) + 80;
+    }
 
     public Car() {
-        super(calculateNormalSpeed());
+        super(generateNormalSpeed());
     }
 
-    protected String generateName() {
-        Random randCarIndex = new Random();
-        Integer oneCarNameIndex = randCarIndex.nextInt(9) + 1;
-        String oneCarName = carNames[oneCarNameIndex];
-        Integer otherCarNameIndex = randCarIndex.nextInt(9) + 1;
-        String otherCarName = carNames[otherCarNameIndex];
-        return oneCarName + " " + otherCarName;
-    }
-
+    @Override
     public void prepareForLap(Race race) {
-
-    }
-
-    private static int calculateNormalSpeed() {
-        return randSpeed.nextInt(110 - 80 + 1) + 80;
+        if (race.isThereABrokenTruck()) actualSpeed = YELLOW_FLAG_SPEED;
+        else actualSpeed = normalSpeed;
     }
 }

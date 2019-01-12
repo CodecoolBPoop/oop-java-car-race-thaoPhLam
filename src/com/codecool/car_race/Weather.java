@@ -1,8 +1,9 @@
 package com.codecool.car_race;
 
 public class Weather {
-    public void setRaining() {
+    private static final int CHANCE_OF_RAIN = 30;
 
+    public Weather() {
     }
 
     public boolean isRaining() {
