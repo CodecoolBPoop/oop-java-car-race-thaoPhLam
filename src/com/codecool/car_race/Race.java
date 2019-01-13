@@ -6,6 +6,7 @@ import java.util.List;
 public class Race {
     private static final int SUM_OF_LAPS = 50;
     private final List<Vehicle> vehicles = new LinkedList<>();
+    private Weather weather = new Weather();
 
     public void registerRacer(Vehicle racer) {
         vehicles.add(racer);
@@ -21,16 +22,17 @@ public class Race {
     }
 
     public void printRaceResults() {
-        for (Vehicle vehicle : vehicles) {
-            System.out.println(vehicle.generateName());
-        }
+        /*for (Vehicle vehicle : vehicles) {
+            System.out.println(
+                    vehicle
+            );
+        }*/
+        vehicles.forEach(System.out::println);
     }
 
     public boolean isThereABrokenTruck() {
         return true;
     }
-
-    private Weather weather = new Weather();
 
     public boolean isRaining() {
         return weather.isRaining();
