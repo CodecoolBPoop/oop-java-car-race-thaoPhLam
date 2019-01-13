@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Truck extends Vehicle {
     private static int normalSpeed = 100;
-    private Random rand = new Random();
+    private static Random rand = new Random();
 
     public Truck() {
         super(normalSpeed);
